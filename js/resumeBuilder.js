@@ -8,3 +8,4 @@ var awesomeThoughts = "I am Rahmona Henry and I am awesome"
 var funThoughts = awesomeThoughts.replace("awesome", "fun");
 $("#main").append("funThoughts");
 
+console.log(funThoughts);
