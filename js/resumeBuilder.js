@@ -5,7 +5,6 @@ $("#main").append("Rahmona Henry");
 
 var awesomeThoughts = "I am Rahmona Henry and I am awesome"
 
-console.log (awesomeThoughts);
+var funThoughts = awesomeThoughts.replace("awesome", "fun");
+$("#main").append("funThoughts");
 
-var funThoughts = awesomeThoughts.replace("awesome","fun");
-$("#main").append("fun thoughts");
