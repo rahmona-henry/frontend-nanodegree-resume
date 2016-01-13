@@ -26,7 +26,7 @@ $("#header").prepend(formattedName);
    "Github", "HTML", "CSS", "JS"
  ],
 
- "biopic": "images/fry.jpg"
+ "biopic": "images/fox.jpg"
  };
 
  if (bio.name.length) {
