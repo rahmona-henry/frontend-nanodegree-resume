@@ -35,7 +35,6 @@ $("#header").prepend(formattedName);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
 
-
    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
    $("#topContacts").append(formattedMobile);
 
@@ -51,3 +50,17 @@ $("#header").prepend(formattedName);
    var formattedPic =HTMLbioPic.replace("%data%", bio.biopic);
    $("#header").append(formattedPic);
 };
+
+if (bio.skills.length) {
+
+   $("#header").append(HTMLskillsStart);
+
+   var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+   $("#skills").append(formattedSkill);
+   formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+   $("#skills").append(formattedSkill);
+ };
