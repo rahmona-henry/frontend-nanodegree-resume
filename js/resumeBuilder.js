@@ -31,10 +31,10 @@ $("#header").prepend(formattedName);
 
 var education = {
 
- education["name"]: "University College Galway";
- education["location"]: "Ireland";
- education["degree":] "Bsc.IT & Bus";
- education["years":] "1999-2003";
+ education["name"] "University College Galway";
+ education["location"] "Ireland";
+ education["degree"] "Bsc.IT & Bus";
+ education["years"] "1999-2003";
 },
 var work = {
  
