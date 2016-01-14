@@ -24,16 +24,30 @@ var bio = {
   "skills" : ["HTML","CSS","JS","github"],
   "bioPic" : "images/fox.jpg"
 };
+ 
 
-$("#main").append(bio.name);
-$("#main").append(bio.role);
+var formattedContacts = HTMLcontactGeneric.replace("%data%",contacts);
 $("#main").append(bio.contacts);
+
+var formattedMobile = HTMLmobile.replace("%data%",mobile);
 $("#main").append(bio.mobile);
+
+var formattedEmail = HTMLemail.replace("%data%",email);
 $("#main").append(bio.email);
+
+var formattedGithub = HTMLgithub.replace("%data%",github);
 $("#main").append(bio.github);
+
+var formattedLocation = HTMLlocation.replace("%data%",location);
 $("#main").append(bio.location);
+
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",welcomeMsg);
 $("#main").append(bio.welcomeMsg);
+
+var formattedSkills = HTMLskills.replace("%data%",skills);
 $("#main").append(bio.skills);
+
+var formattedBiopic = HTMLbioPic.replace("%data%",bioPic);
 $("#main").append(bio.bioPic);
 
 //var work = {position,employer,years};
