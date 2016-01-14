@@ -29,25 +29,6 @@ $("#header").prepend(formattedName);
  "biopic": "images/fox.jpg"
  };
 
-var education = {
-
- education["name"] "University College Galway";
- education["location"] "Ireland";
- education["degree"] "Bsc.IT & Bus";
- education["years"] "1999-2003";
-},
-var work = {
- 
-   work.position : "Project Manager";
-   work.employer : "Loyalty Services Ltd ";
-   work.years : " 4 years ";
- }, 
-
-  
-$("#main").append(work["position"]);
-$("#main").append(eduaction.name);
-
-
 
  if (bio.name.length) {
 
