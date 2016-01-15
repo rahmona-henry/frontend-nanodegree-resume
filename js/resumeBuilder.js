@@ -169,4 +169,5 @@ $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
 }
+}
 displayEducation();
