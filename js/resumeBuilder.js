@@ -19,14 +19,17 @@ var bio = {
 };
 
 var work = {
-
-"position" : "Project Manager",
-"employer" : "Loyalty Services Ltd",
-"years" : "2011-to date",
-"city" : "Auckland/Queenstown"
+  "position" : "Project Manager",
+  "employer" : "Loyalty Services Ltd",
+  "years" : "2011-to date",
+  "city" : "Auckland/Queenstown"
 };
 
-
+var education = {
+"name": "University College Galway",
+"years": "1999-2003",
+"city": "Glaway"
+};
 
  
 var formattedRole = HTMLheaderRole.replace("%data%",role);
@@ -56,7 +59,6 @@ $("#header").append(formattedSkills);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
-
 var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
 $("#workExperience").append(formattedPosition);
 
@@ -69,4 +71,11 @@ $("#workExperience").append(formattedYears);
 var formattedCity = HTMLworkLocation.replace("%data%",work.city);
 $("#workExperience").append(formattedCity);
 
+var formattedName = HTMLschoolName.replace("%data%",education.name);
+$("#education").append(formattedName);
 
+var formattedYears = HTMLschoolDates.replace("%data%",education.years);
+$("#education").append(formattedYears);
+
+var formattedCity = HTMLschoolLocation.replace("%data%",education.city);
+$("#education").append(formattedCity);
