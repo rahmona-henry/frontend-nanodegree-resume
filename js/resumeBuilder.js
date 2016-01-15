@@ -202,7 +202,7 @@ if (projects.projects[project].images.length >0) {
 };
 
 projects.display();
-//click
 
 
-//
+//Google Map
+$("#mapDiv").append(googleMap);
