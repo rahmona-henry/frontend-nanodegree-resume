@@ -42,7 +42,7 @@ var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
 if (bio.skills.length>0) {
-$("#header").append(HTMLskillsStart);
+  $("#header").append(HTMLskillsStart);
  
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
   $("#skills").append(formattedSkill);
@@ -57,8 +57,6 @@ $("#header").append(HTMLskillsStart);
   $("#skills").append(formattedSkill);
 
 };
-
-
 
 
 var education = {
@@ -118,7 +116,6 @@ var projects = {
 ]
 };
 
-
 function displayWork () {
 for (job in work.jobs) {
 $("#workExperience").append(HTMLworkStart);
@@ -129,33 +126,13 @@ var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
 $(".work-entry:last").append(formattedEmployerTitle);
 
-var formattedDate = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-$("work-entry:last").append(formattedDate);
+var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+$(".work-entry:last").append(formattedDates);
 
-var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
-$("work-entry:last").append(formattedDescription);
+var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description)
+$(".work-entry:last").append(formattedDescription);
 
 }
 }
 displayWork();
 
-//var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
-//$("#main").append(formattedPosition);
-
-//var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
-//$("#main").append(formattedEmployer);
-
-//var formattedYears = HTMLworkDates.replace("%data%",work.years);
-//$("#main").append(formattedYears);
-
-//var formattedCity = HTMLworkLocation.replace("%data%",work.city);
-//$("#main").append(formattedCity);
-
-//var formattedName = HTMLschoolName.replace("%data%",education.name);
-//$("#main").append(formattedName);
-
-//var formattedYears = HTMLschoolDates.replace("%data%",education.years);
-//$("#main").append(formattedYears);
-
-//var formattedCity = HTMLschoolLocation.replace("%data%",education.city);
-//$("#main").append(formattedCity);
