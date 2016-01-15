@@ -19,7 +19,7 @@ var bio = {
 };
  
 var formattedName = HTMLheaderName.replace("%data%",name);
-$("#header").prepend(formattedName);
+$("#header").append(formattedName);
 
 var formattedRole = HTMLheaderRole.replace("%data%",role);
 $("#header").prepend(formattedRole);
