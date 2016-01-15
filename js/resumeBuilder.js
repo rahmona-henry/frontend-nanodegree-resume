@@ -18,20 +18,62 @@ var bio = {
   "bioPic" : "images/fox.jpg"
 };
 
-var work = {
-  "position" : "Project Manager",
-  "employer" : "Loyalty Services Ltd",
-  "years" : "2011-to date",
-  "city" : "Auckland/Queenstown"
-};
-
 var education = {
-"name": "University College Galway",
-"years": "1999-2003",
-"city": "Glaway"
-};
+    "schools" : [
+    {
+      "name" : "University College Galway",
+      "city" : "Galway,Ireland",
+      "years" : "1999-2003",
+      "degree" : "B.Sc in IT & Business"
+    },
 
- 
+    {
+      "name" : "St Josephs College Summerhill",
+      "city" : "Athlone,Ireland",
+      "years" : "1993-1999",
+      "Certificate" : "Honours Leaving Cert"
+    }
+  ],
+
+  "onlineCourses" : [
+  {
+    "title": "JavaScript Syntax",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "http://www.udacity.com/course/ud804"
+  }
+ ]
+}
+
+var work = {
+  "jobs" : [
+  {
+  "employer" : "Loyalty Services Ltd",
+  "title" : "Project Manager",
+  "dates" : "2011-to date",
+  "description" : "blah,blah,blah"
+  },
+
+  {
+  "employer" : "The Winery",
+  "title" : "Marketing & Event Manager",
+  "dates" : "2009-2011",
+  "description" : "blah,blah,blah"
+  }
+ ]
+}
+
+var projects = {
+  "projects" : [
+    {
+"title": "Sample Project",
+"dates": "xxxx",
+"description": "xxxxxxxxxx"
+   }
+]
+}
+
+
 var formattedRole = HTMLheaderRole.replace("%data%",role);
 $("#header").prepend(formattedRole);
 
@@ -53,11 +95,28 @@ $("#topContacts").append(formattedLocation);
 var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
 $("#header").append(formattedMsg);
 
+var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
+$("#header").append(formattedBiopic);
+
 var formattedSkills = HTMLskills.replace("%data%",bio.skills);
 $("#header").append(formattedSkills);
 
-var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
-$("#header").append(formattedBiopic);
+if (bio.skills.lenght >0) {
+  $("header").append(HTMLskillsStart);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
+  $("#skills").append(formattedSkill);
+
+}
 
 
 var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
