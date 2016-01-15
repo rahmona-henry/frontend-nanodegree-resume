@@ -158,8 +158,8 @@ $(".education-entry:last").append(formattedDegree);
 }
 displayEducation();
 
-$(".education-entry:last").append(HTMLschoolStart);  
-//$("#education").append(HTMLonlineClasses);  
+
+$("#education").append(HTMLonlineClasses);  
 for (course in education.onlineCourses) {
 
 var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
