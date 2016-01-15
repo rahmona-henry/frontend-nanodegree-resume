@@ -26,28 +26,25 @@ var bio = {
 };
  
 
-var formattedContacts = HTMLcontactGeneric.replace("%data%",contacts);
-$("#main").append(bio.contacts);
+var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+$("#topContacts").append(formattedMobile);
 
-var formattedMobile = HTMLmobile.replace("%data%",mobile);
-$("#main").append(bio.mobile);
+var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+$("#topContacts").append(formattedEmail);
 
-var formattedEmail = HTMLemail.replace("%data%",email);
-$("#main").append(bio.email);
+var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
+$("#topContacts").append(formattedGithub);
 
-var formattedGithub = HTMLgithub.replace("%data%",github);
-$("#main").append(bio.github);
+var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
+$("#topContacts").append(formattedLocation);
 
-var formattedLocation = HTMLlocation.replace("%data%",location);
-$("#main").append(bio.location);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg));
+$("#header").append(formattedWelcomeMsg);
 
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",welcomeMsg);
-$("#main").append(bio.welcomeMsg);
+var formattedSkills = HTMLskills.replace("%data%",bio.skills);
+$("#header").append(formattedSkills);
 
-var formattedSkills = HTMLskills.replace("%data%",skills);
-$("#main").append(bio.skills);
-
-var formattedBiopic = HTMLbioPic.replace("%data%",bioPic);
-$("#main").append(bio.bioPic);
+var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
+$("#header").append(formattedBiopic);
 
 //var work = {position,employer,years};
