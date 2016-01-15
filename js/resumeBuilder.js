@@ -142,7 +142,7 @@ displayWork();
 
 function displayEducation () {
 for (school in education.schools) {
-$(".education-entry:last").append(HTMLschoolStart);  
+$("#education-entry:last").append(HTMLschoolStart);  
 
 var formattedName = HTMLschoolName.replace("%data%",education.schools[school].name);
 var formattedLocation =  HTMLschoolLocation.replace("%data%",education.schools[school].location);
