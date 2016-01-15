@@ -113,7 +113,7 @@ var projects = {
 "title": "Sample Project",
 "dates": "xxxx",
 "description": "xxxxxxxxxx",
-"images" : "images/fox.jpg"
+"images" : "images/udacity.jpg"
    }
 ]
 };
