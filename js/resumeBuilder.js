@@ -112,8 +112,9 @@ var projects = {
     {
 "title": "My Resume",
 "dates": "2016",
-"description": "Using the Udacity JavaScript basics course I created my resume using JS,HTML & CSS",
-"images" : "images/resume.jpg"
+"description": "Using the Udacity JavaScript basics course I created my resume using JS,HTML & CSS.",
+"images" :["images/resume.jpg"
+   ]
    }
 ]
 };
