@@ -159,9 +159,9 @@ $(".education-entry:last").append(formattedDegree);
 displayEducation();
 
 
-
-for (course in education.onlineCourses) {
 $("#education").append(HTMLonlineClasses);  
+for (course in education.onlineCourses) {
+
 //$(".education-entry:last").append(HTMLonlineClasses);
 
 var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
