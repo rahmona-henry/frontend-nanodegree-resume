@@ -98,10 +98,10 @@ $("#header").append(formattedMsg);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
-var formattedSkills = HTMLskills.replace("%data%",bio.skills);
-$("#header").append(formattedSkills);
+
 
 if (bio.skills.lenght >0) {
+  var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
   $("header").append(HTMLskillsStart);
 
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
@@ -137,7 +137,7 @@ $("work-entry:last").append(formattedDescription);
 }
 }
 
-displaywork();
+displayWork();
 //var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
 //$("#main").append(formattedPosition);
 
