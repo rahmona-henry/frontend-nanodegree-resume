@@ -64,16 +64,16 @@ var education = {
     "schools" : [
     {
       "name" : "University College Galway",
-      "city" : "Galway,Ireland",
+      "location" : "Galway,Ireland",
       "years" : "1999-2003",
       "degree" : "B.Sc in IT & Business"
     },
 
     {
       "name" : "St Josephs College Summerhill",
-      "city" : "Athlone,Ireland",
+      "location" : "Athlone,Ireland",
       "years" : "1993-1999",
-      "Certificate" : "Honours Leaving Cert"
+      "degree" : "Honours Leaving Cert"
     }
   ],
 
@@ -139,4 +139,23 @@ $(".work-entry:last").append(formattedDescription);
 }
 displayWork();
 
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
+
+
+function displayEducation () {
+for (school in education.schools) {
+$("#education").append(HTMLschoolStart);  
+
+var formattedName = HTMLschoolName.replace("%data%",education.schools[school].name);
+var formattedLocation =  HTMLschoolLocation.replace("%data%",education.schools[school].location);
+var formattedYear =  HTMLschoolDates.replace("%data%",education.schools[school].years);
+var formattedDegree =  HTMLschoolDegree.replace("%data%",education.schools[school].degree);
+
+$(".education-entry:last").append(formattedName);
+$(".eduaction-entry:last").append(formattedLocation);
+$(".education-entry:last").append(formattedYear);
+$(".education-entry:last").append(formattedDegree);
+
+}
+}
+displayEducation();
