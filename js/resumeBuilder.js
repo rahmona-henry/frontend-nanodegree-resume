@@ -83,7 +83,6 @@ var projects = {
 ]
 }
 
-
 var formattedRole = HTMLheaderRole.replace("%data%",role);
 $("#header").prepend(formattedRole);
 
@@ -108,6 +107,7 @@ $("#header").append(formattedMsg);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
+};
 
 if (bio.skills.length) {
 
