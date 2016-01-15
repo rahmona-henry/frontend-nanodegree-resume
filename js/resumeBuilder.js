@@ -50,6 +50,7 @@ var work = {
   {
   "employer" : "Loyalty Services Ltd",
   "title" : "Project Manager",
+  "location" : "Auckland",
   "dates" : "2011-to date",
   "description" : "blah,blah,blah"
   },
@@ -57,11 +58,20 @@ var work = {
   {
   "employer" : "The Winery",
   "title" : "Marketing & Event Manager",
+  "location" : "Queenstown",
   "dates" : "2009-2011",
   "description" : "blah,blah,blah"
   }
  ]
-}
+};
+
+
+
+
+
+
+
+
 
 var projects = {
   "projects" : [
@@ -100,7 +110,7 @@ $("#header").append(formattedBiopic);
 
 
 
-if (bio.skills.lenght >0) {
+if (bio.skills.length >0) {
   var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
   $("header").append(HTMLskillsStart);
 
