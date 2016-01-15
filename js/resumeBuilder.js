@@ -59,6 +59,7 @@ $("#header").append(formattedSkills);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
+
 var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
 $("#workExperience").append(formattedPosition);
 
