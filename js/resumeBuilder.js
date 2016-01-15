@@ -139,4 +139,4 @@ $(".work-entry:last").append(formattedDescription);
 }
 displayWork();
 
-//$("#mapDiv").append(googleMap);
+$("#mapDiv").append(googleMap);
