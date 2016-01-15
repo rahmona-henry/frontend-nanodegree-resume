@@ -22,7 +22,7 @@ var formattedName = HTMLheaderName.replace("%data%",bio.name);
 $("#header").prepend(formattedName);
 
 var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-$("#header").append(formattedRole);
+$("#header").prepend(formattedRole);
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
 $("#topContacts").append(formattedMobile);
