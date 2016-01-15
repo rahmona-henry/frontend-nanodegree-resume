@@ -4,12 +4,6 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var name = "Rahmona Henry"
 var role = "Web Developer"
-
-var formattedName = HTMLheaderName.replace("%data%",name);
-$("#header").prepend(formattedName);
-
-var formattedRole = HTMLheaderRole.replace("%data%",role);
-$("#header").append(formattedRole);
   
 var bio = {
   "name" : "Rahmona Henry",
@@ -25,6 +19,11 @@ var bio = {
   "bioPic" : "images/fox.jpg"
 };
  
+var formattedName = HTMLheaderName.replace("%data%",name);
+$("#header").prepend(formattedName);
+
+var formattedRole = HTMLheaderRole.replace("%data%",role);
+$("#header").append(formattedRole);
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 $("#topContacts").append(formattedMobile);
@@ -41,8 +40,8 @@ $("#topContacts").append(formattedLocation);
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg));
 $("#header").append(formattedWelcomeMsg);
 
-var formattedSkills = HTMLskills.replace("%data%",bio.skills);
-$("#header").append(formattedSkills);
+//var formattedSkills = HTMLskills.replace("%data%",bio.skills);
+//$("#header").append(formattedSkills);
 
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
