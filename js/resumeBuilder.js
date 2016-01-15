@@ -109,11 +109,11 @@ var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
 
-
 if (bio.skills.length >0) {
-  var formattedSkills = HTMLskills.replace("%data%",bio.skills[skill]);
-  $("header").append(HTMLskillsStart);
 
+  $("header").append(HTMLskillsStart);
+  //var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
+  
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
   $("#skills").append(formattedSkill);
 
@@ -126,7 +126,7 @@ if (bio.skills.length >0) {
   var formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
   $("#skills").append(formattedSkill);
 
-}
+};
 
 function displayWork () {
 for (job in work.jobs) {
@@ -146,8 +146,8 @@ $("work-entry:last").append(formattedDescription);
 
 }
 }
-
 displayWork();
+
 //var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
 //$("#main").append(formattedPosition);
 
