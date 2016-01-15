@@ -15,7 +15,7 @@ var bio = {
   "location" : "Queenstown, New Zealand"
   },
   "welcomeMsg" : "Welcome to my resume",
-  "skills" : ["HTML","CSS","JS","github"],
+  //"skills" : ["HTML","CSS","JS","github"],
   "bioPic" : "images/fox.jpg"
 };
  
@@ -37,8 +37,8 @@ $("#topContacts").append(formattedGithub);
 var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg));
-$("#header").append(formattedWelcomeMsg);
+var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
+$("#header").append(formattedMsg);
 
 //var formattedSkills = HTMLskills.replace("%data%",bio.skills);
 //$("#header").append(formattedSkills);
