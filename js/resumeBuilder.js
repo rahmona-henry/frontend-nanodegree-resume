@@ -139,8 +139,6 @@ $(".work-entry:last").append(formattedDescription);
 }
 displayWork();
 
-//$("#mapDiv").append(googleMap);
-
 
 function displayEducation () {
 for (school in education.schools) {
@@ -157,5 +155,18 @@ $(".education-entry:last").append(formattedYear);
 $(".education-entry:last").append(formattedDegree);
 
 }
+for (onlinecourse in education.onlinecourses) {
+$("#education").append(HTMLonlineClasses);  
+
+var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlinecourses[onlinecourse].title);
+var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlinecourses[onlinecourse].school);
+var formattedDates = HTMLonlineDates.replace("%data%",education.onlinecourses[onlinecourse].dates);
+var formattedUrl =  HTMLonlineURL.replace("%data%",education.onlinecourses[onlinecourse].url);
+
+$(".education-entry:last").append(formattedTitle);
+$(".education-entry:last").append(formattedSchool);
+$(".education-entry:last").append(formattedDates);
+$(".education-entry:last").append(formattedUrl);
+
 }
 displayEducation();
