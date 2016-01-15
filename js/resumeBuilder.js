@@ -81,7 +81,7 @@ var education = {
   {
     "title": "JavaScript Syntax",
     "school": "Udacity",
-    "dates": 2016,
+    "dates": "2016",
     "url": "http://www.udacity.com/course/ud804"
   }
  ]
@@ -112,11 +112,12 @@ var projects = {
     {
 "title": "Sample Project",
 "dates": "xxxx",
-"description": "xxxxxxxxxx"
+"description": "xxxxxxxxxx",
+"images" : "images/fox.jpg"
    }
 ]
 };
-
+//Display work function
 function displayWork () {
 for (job in work.jobs) {
 $("#workExperience").append(HTMLworkStart);
@@ -139,7 +140,7 @@ $(".work-entry:last").append(formattedDescription);
 }
 displayWork();
 
-
+//Display education function
 function displayEducation () {
 for (school in education.schools) {
 $("#education").append(HTMLschoolStart);  
@@ -158,10 +159,9 @@ $(".education-entry:last").append(formattedDegree);
 }
 displayEducation();
 
+//Display online courses
 $(".education-entry:last").append(HTMLonlineClasses);
-
 for (course in education.onlineCourses) {
-//$("#education").append(HTMLonlineClasses);  
 
 
 var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
@@ -175,3 +175,32 @@ $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
 };
+
+//Display projects
+
+projects.display = function () {
+for (project in projects.projects) {
+$("#projects").append(HTMLprojectStart);
+
+var formattedTitle = HTMLprojectTitle.replace("#%data%",projects.projects[project].title);
+$(".project-entry:last").append(formattedTitle);
+
+var formattedDates = HTMLprojectDates.replace("#%data%",projects.projects[project].dates);
+$(".project-entry:last").append(formattedDates);
+
+var formattedDescription = HTMLprojectDescription.replace("#%data%",projects.projects[project].description);
+$(".project-entry:last").append(formattedDescription);
+
+if (projects.projects[project].images.length >0) {
+    for (image in projects.projects[project].images) {
+    var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images[image]);
+    $(".project-entry:last").append(formattedImage);
+    }
+  }
+ }
+};
+projects.display();
+//click
+
+
+//
