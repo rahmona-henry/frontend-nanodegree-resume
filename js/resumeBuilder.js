@@ -2,8 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var name = "Rahmona Henry";
-var role = "Web Developer";
-  
+var role = "Web Developer"; 
 var bio = {
   "name" : "Rahmona Henry",
   "role" : "Web Developer",
@@ -17,6 +16,53 @@ var bio = {
   "skills" : ["HTML","CSS","JS","github"],
   "bioPic" : "images/fox.jpg"
 };
+
+var formattedRole = HTMLheaderRole.replace("%data%",role);
+$("#header").prepend(formattedRole);
+
+var formattedName = HTMLheaderName.replace("%data%",name);
+$("#header").prepend(formattedName);
+
+var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
+$("#topContacts").append(formattedMobile);
+
+var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
+$("#topContacts").append(formattedEmail);
+
+var formattedGithub = HTMLgithub.replace("%data%",bio.contact.github);
+$("#topContacts").append(formattedGithub);
+
+var formattedLocation = HTMLlocation.replace("%data%",bio.contact.location);
+$("#topContacts").append(formattedLocation);
+
+var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
+$("#header").append(formattedMsg);
+
+var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
+$("#header").append(formattedBiopic);
+
+ $("header").append(HTMLskillsStart);
+
+if (bio.skills.length>0) {
+
+ 
+  
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
+  $("#skills").append(formattedSkill);
+
+};
+
+
+
 
 var education = {
     "schools" : [
@@ -75,29 +121,7 @@ var projects = {
 ]
 };
 
-var formattedRole = HTMLheaderRole.replace("%data%",role);
-$("#header").prepend(formattedRole);
 
-var formattedName = HTMLheaderName.replace("%data%",name);
-$("#header").prepend(formattedName);
-
-var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
-$("#topContacts").append(formattedMobile);
-
-var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
-$("#topContacts").append(formattedEmail);
-
-var formattedGithub = HTMLgithub.replace("%data%",bio.contact.github);
-$("#topContacts").append(formattedGithub);
-
-var formattedLocation = HTMLlocation.replace("%data%",bio.contact.location);
-$("#topContacts").append(formattedLocation);
-
-var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
-$("#header").append(formattedMsg);
-
-var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
-$("#header").append(formattedBiopic);
 
 
 
@@ -130,7 +154,7 @@ var formattedEmployerTitle = formattedEmployer + formattedTitle;
 $(".work-entry:last").append(formattedEmployerTitle);
 
 var formattedDate = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-$("work-entry:last").append(formattedDates);
+$("work-entry:last").append(formattedDate);
 
 var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
 $("work-entry:last").append(formattedDescription);
