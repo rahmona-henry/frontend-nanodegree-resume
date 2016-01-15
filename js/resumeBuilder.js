@@ -172,3 +172,4 @@ $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
 };
+$("#education").append(education.display);  
