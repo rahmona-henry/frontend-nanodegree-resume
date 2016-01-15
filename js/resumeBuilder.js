@@ -160,17 +160,17 @@ displayEducation();
 
 
  
-for (course in education.onlineCourses) {
-$("#education").append(HTMLonlineClasses);
+//for (course in education.onlineCourses) {
+//$("#education").append(HTMLonlineClasses);
 
-var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
-var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
-var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
-var formattedUrl =  HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
+//var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[course].title);
+//var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[course].school);
+//var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[course].dates);
+//var formattedUrl =  HTMLonlineURL.replace("%data%",education.onlineCourses[course].url);
 
-$(".education-entry:last").append(formattedTitle);
-$(".education-entry:last").append(formattedSchool);
-$(".education-entry:last").append(formattedDates);
-$(".education-entry:last").append(formattedUrl);
+//$(".education-entry:last").append(formattedTitle);
+//$(".education-entry:last").append(formattedSchool);
+//$(".education-entry:last").append(formattedDates);
+//$(".education-entry:last").append(formattedUrl);
 
-};
+//};
