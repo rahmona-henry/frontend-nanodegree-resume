@@ -1,7 +1,8 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-
+var name = "Rahmona Henry";
+var role = "Web Developer";
   
 var bio = {
   "name" : "Rahmona Henry",
@@ -38,8 +39,8 @@ $("#topContacts").append(formattedLocation);
 var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
 $("#header").append(formattedMsg);
 
-//var formattedSkills = HTMLskills.replace("%data%",bio.skills);
-//$("#header").append(formattedSkills);
+var formattedSkills = HTMLskills.replace("%data%",bio.skills);
+$("#header").append(formattedSkills);
 
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
