@@ -18,11 +18,11 @@ var bio = {
   "bioPic" : "images/fox.jpg"
 };
  
-var formattedName = HTMLheaderName.replace("%data%",name);
-$("#header").prepend(formattedName);
-
 var formattedRole = HTMLheaderRole.replace("%data%",role);
 $("#header").prepend(formattedRole);
+ 
+var formattedName = HTMLheaderName.replace("%data%",name);
+$("#header").prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
 $("#topContacts").append(formattedMobile);
