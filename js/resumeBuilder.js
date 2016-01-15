@@ -41,6 +41,8 @@ $("#header").append(formattedMsg);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
+
+
 if (bio.skills.length>0) {
   $("#header").append(HTMLskillsStart);
  
@@ -57,7 +59,6 @@ if (bio.skills.length>0) {
   $("#skills").append(formattedSkill);
 
 };
-
 
 var education = {
     "schools" : [
@@ -136,3 +137,4 @@ $(".work-entry:last").append(formattedDescription);
 }
 displayWork();
 
+$("#mapDiv").append(googleMap);
