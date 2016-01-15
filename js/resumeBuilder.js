@@ -77,7 +77,7 @@ var education = {
     }
   ],
 
-  "onlineCourse" : [
+  "onlineCourses" : [
   {
     "title": "JavaScript Syntax",
     "school": "Udacity",
@@ -158,13 +158,14 @@ $(".education-entry:last").append(formattedDegree);
 }
 displayEducation();
 
-$("#education").append(HTMLonlineClasses);  
-for (onlinecourses in education.onlinecourse) {
+$(".education-entry:last").append(HTMLschoolStart);  
+//$("#education").append(HTMLonlineClasses);  
+for (course in education.onlinecourses) {
 
-var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlinecourse[onlinecourses].title);
-var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlinecourse[onlinecourses].school);
-var formattedDates = HTMLonlineDates.replace("%data%",education.onlinecourse[onlinecourses].dates);
-var formattedUrl =  HTMLonlineURL.replace("%data%",education.onlinecourse[onlinecourses].url);
+var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlinecourses[course].title);
+var formattedSchool = HTMLonlineSchool.replace("%data%",education.onlinecourses[course].school);
+var formattedDates = HTMLonlineDates.replace("%data%",education.onlinecourses[course].dates);
+var formattedUrl =  HTMLonlineURL.replace("%data%",education.onlinecourses[course].url);
 
 $(".education-entry:last").append(formattedTitle);
 $(".education-entry:last").append(formattedSchool);
@@ -172,4 +173,3 @@ $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
 };
-$("#education").append(education.display);  
