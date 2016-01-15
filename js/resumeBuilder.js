@@ -159,7 +159,7 @@ $(".education-entry:last").append(formattedDegree);
 displayEducation();
 
 
-$(".education-entry:last").append(HTMLonlineClasses); 
+$("#education").append(HTMLonlineClasses); 
 for (course in education.onlineCourses) {
 //$(".education-entry:last").append(HTMLonlineClasses);
 
