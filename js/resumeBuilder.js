@@ -126,7 +126,7 @@ var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
 var formattedEmployerTitle = formattedEmployer + formattedTitle;
 $(".work-entry:last").append(formattedEmployerTitle);
 
-var formattedWorkLocation =HTMLworkLocationreplace("%data%",work.jobs[job].location);
+var formattedWorkLocation =HTMLworkLocation.replace("%data%",work.jobs[job].location);
 $(".work-entry:last").append(formattedWorkLocation);
 
 var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
