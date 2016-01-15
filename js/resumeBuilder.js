@@ -58,15 +58,15 @@ $("#header").append(formattedBiopic);
 
 
 var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
-$("workExperience").append(formattedPosition);
+$("#workExperience").append(formattedPosition);
 
 var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
-$("workExperience").append(formattedEmployer);
+$("#workExperience").append(formattedEmployer);
 
 var formattedYears = HTMLworkDates.replace("%data%",work.years);
-$("workExperience").append(formattedYears);
+$("#workExperience").append(formattedYears);
 
 var formattedCity = HTMLworkLocation.replace("%data%",work.city);
-$("workExperience").append(formattedCity);
+$("#workExperience").append(formattedCity);
 
 
