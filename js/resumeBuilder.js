@@ -124,9 +124,8 @@ $("#workExperience").append(HTMLworkStart);
 var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
 var formattedEmployerTitle = formattedEmployer + formattedTitle;
-$(".work-entry:last").append(formattedEmployerTitle);
-
 var formattedWorkLocation =HTMLworkLocationreplace("%data%",work.jobs[job].location);
+$(".work-entry:last").append(formattedEmployerTitle);
 $(".work-entry:last").append(formattedWorkLocation);
 
 var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
@@ -137,6 +136,7 @@ $(".work-entry:last").append(formattedDescription);
 
 }
 }
+$("#mapDiv").append(googleMap);
 displayWork();
 
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
