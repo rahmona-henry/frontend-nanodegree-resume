@@ -77,7 +77,7 @@ var education = {
     }
   ],
 
-  "onlineCourses" : [
+  "onlineCourse" : [
   {
     "title": "JavaScript Syntax",
     "school": "Udacity",
