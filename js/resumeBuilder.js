@@ -17,10 +17,21 @@ var bio = {
   "skills" : ["HTML","CSS","JS","github"],
   "bioPic" : "images/fox.jpg"
 };
+
+var work = {
+
+"position" : "Project Manager",
+"employer" : "Loyalty Services Ltd",
+"years" : "2011-to date",
+"city" : "Auckland/Queenstown"
+};
+
+
+
  
 var formattedRole = HTMLheaderRole.replace("%data%",role);
 $("#header").prepend(formattedRole);
- 
+
 var formattedName = HTMLheaderName.replace("%data%",name);
 $("#header").prepend(formattedName);
 
@@ -45,4 +56,17 @@ $("#header").append(formattedSkills);
 var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
-//var work = {position,employer,years};
+
+var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
+$("workExperience").append(formattedPosition);
+
+var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
+$("workExperience").append(formattedEmployer);
+
+var formattedYears = HTMLworkDates.replace("%data%",work.years);
+$("workExperience").append(formattedYears);
+
+var formattedCity = HTMLworkLocation.replace("%data%",work.city);
+$("workExperience").append(formattedCity);
+
+
