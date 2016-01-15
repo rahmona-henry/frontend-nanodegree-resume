@@ -155,6 +155,9 @@ $(".education-entry:last").append(formattedYear);
 $(".education-entry:last").append(formattedDegree);
 
 }
+}
+displayEducation();
+
 for (onlinecourse in education.onlinecourses) {
 $("#education").append(HTMLonlineClasses);  
 
@@ -168,6 +171,4 @@ $(".education-entry:last").append(formattedSchool);
 $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
-}
-}
-displayEducation();
+};
