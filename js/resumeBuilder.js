@@ -109,7 +109,7 @@ var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedBiopic);
 
 
-if (bio.skills.length >0) {
+if (bio.skills.length) {
 
   $("header").append(HTMLskillsStart);
   //var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
