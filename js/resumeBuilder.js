@@ -61,22 +61,22 @@ $("#header").append(formattedBiopic);
 
 
 var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
-$("#workExperience").append(formattedPosition);
+$("#main").append(formattedPosition);
 
 var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
-$("#workExperience").append(formattedEmployer);
+$("#main").append(formattedEmployer);
 
 var formattedYears = HTMLworkDates.replace("%data%",work.years);
-$("#workExperience").append(formattedYears);
+$("#main").append(formattedYears);
 
 var formattedCity = HTMLworkLocation.replace("%data%",work.city);
-$("#workExperience").append(formattedCity);
+$("#main").append(formattedCity);
 
 var formattedName = HTMLschoolName.replace("%data%",education.name);
-$("#education").append(formattedName);
+$("#main").append(formattedName);
 
 var formattedYears = HTMLschoolDates.replace("%data%",education.years);
-$("#education").append(formattedYears);
+$("#main").append(formattedYears);
 
 var formattedCity = HTMLschoolLocation.replace("%data%",education.city);
-$("#education").append(formattedCity);
+$("#main").append(formattedCity);
