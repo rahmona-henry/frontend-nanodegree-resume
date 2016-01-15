@@ -136,23 +136,23 @@ $("work-entry:last").append(formattedDescription);
 
 }
 
-var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
-$("#main").append(formattedPosition);
+//var formattedPosition = HTMLworkTitle.replace("%data%",work.position);
+//$("#main").append(formattedPosition);
 
-var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
-$("#main").append(formattedEmployer);
+//var formattedEmployer = HTMLworkEmployer.replace("%data%",work.employer);
+//$("#main").append(formattedEmployer);
 
-var formattedYears = HTMLworkDates.replace("%data%",work.years);
-$("#main").append(formattedYears);
+//var formattedYears = HTMLworkDates.replace("%data%",work.years);
+//$("#main").append(formattedYears);
 
-var formattedCity = HTMLworkLocation.replace("%data%",work.city);
-$("#main").append(formattedCity);
+//var formattedCity = HTMLworkLocation.replace("%data%",work.city);
+//$("#main").append(formattedCity);
 
-var formattedName = HTMLschoolName.replace("%data%",education.name);
-$("#main").append(formattedName);
+//var formattedName = HTMLschoolName.replace("%data%",education.name);
+//$("#main").append(formattedName);
 
-var formattedYears = HTMLschoolDates.replace("%data%",education.years);
-$("#main").append(formattedYears);
+//var formattedYears = HTMLschoolDates.replace("%data%",education.years);
+//$("#main").append(formattedYears);
 
-var formattedCity = HTMLschoolLocation.replace("%data%",education.city);
-$("#main").append(formattedCity);
+//var formattedCity = HTMLschoolLocation.replace("%data%",education.city);
+//$("#main").append(formattedCity);
