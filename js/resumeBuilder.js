@@ -159,7 +159,7 @@ $(".education-entry:last").append(formattedDegree);
 }
 }
 
-function loactionizer(work_obj){
+function locationizer(work_obj){
 var locationArray =[];
 for (job in work_obj.jobs){
   var newLocation = work_obj.jobs[job].location;
