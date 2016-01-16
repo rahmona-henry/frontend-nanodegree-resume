@@ -158,6 +158,20 @@ $(".education-entry:last").append(formattedDegree);
 
 }
 }
+
+function loactionizer(work_obj){
+var locationArray =[];
+for (job in work_obj.jobs){
+  var newLocation = work_obj.jobs[job].location;
+  locationArray.push(newLocation);
+
+}
+
+return locationArray;
+}
+
+console.log(locationizer(work));
+
 displayEducation();
 
 //Display online courses
