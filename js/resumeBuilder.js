@@ -13,7 +13,7 @@ var bio = {
          "location" : "Queenstown, New Zealand"
               },
   "welcomeMsg" : "Welcome to my resume",
-  "skills" : ["HTML","CSS","JS","github"],
+  "skills" : ["HTML","CSS","JS","Github"],
   "bioPic" : "images/fox.jpg"
 };
 
@@ -94,7 +94,11 @@ var work = {
   "title" : "Project Manager",
   "location" : "Auckland",
   "dates" : "2011-to date",
-  "description" : "blah,blah,blah"
+  "description" : " Agreeing project objectives with clients, our team of developers and contractors.
+   Risk assessment and ensuring all the aims of the project are met and making sure the quality standards 
+   are maintained. Managing IT systems to keep track of people and progress, recruiting specialists and
+   sub-contractors, monitoring sub-contractors to ensure guidelines are maintained. Overseeing the 
+   accounting, costing and billing."
   },
 
   {
@@ -102,7 +106,12 @@ var work = {
   "title" : "Marketing & Event Manager",
   "location" : "Queenstown",
   "dates" : "2009-2011",
-  "description" : "blah,blah,blah"
+  "description" :" Working closely with senior management to execute the domestic marketing plan.Promote
+  the company across various industry and target B2B marketing platforms. Hands on generalist marketing 
+  role with a focus on events management. Research, develop and maintain active attendance at relevant
+  industry events, alongside promoting all manner of internal events. BuildING robust relationships with
+  key third-parties (i.e. media agencies) and wider marketing team.Monitor and follow competitors own coverage
+  and attendances"
   }
  ]
 };
