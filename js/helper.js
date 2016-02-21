@@ -83,13 +83,9 @@ function logClicks(x,y) {
   );
   console.log('x location: ' + x + '; y location: ' + y);
 }
-// your code goes here!
-$(document).click(function(loc) {
-    var x = loc.pageX;
-    var y = loc.pageY;
-    
-    logClicks(x,y);
 
+$(document).click(function(loc) {
+  // your code goes here!
 });
 
 
@@ -181,6 +177,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -246,7 +243,7 @@ window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+//   Make sure the map bounds get updated on page resize
+ map.fitBounds(mapBounds);
+});

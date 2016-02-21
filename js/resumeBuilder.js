@@ -2,62 +2,59 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var name = "Rahmona Henry";
-var role = "Web Developer"; 
+var role = "Web Developer";
 var bio = {
-  "name" : "Rahmona Henry",
-  "role" : "Web Developer",
-  "contact" : {
-         "mobile" : "111-111111",
-         "email" : "rahmona.henry@icloud.com",
-         "github" : "rahmona-henry",
-         "location" : "Queenstown, New Zealand"
-              },
-  "welcomeMsg" : "Welcome to my resume",
-  "skills" : ["HTML","CSS","JS","Github"],
-  "bioPic" : "images/fox.jpg"
+  "name": "Rahmona Henry",
+  "role": "Web Developer",
+  "contact": {
+    "mobile": "111-111-111",
+    "email": "rahmona.henry@icloud.com",
+    "github": "rahmona-henry",
+    "location": "Queenstown, New Zealand"
+    },
+  "welcomeMsg": "Welcome to my resume!",
+  "skills": ["HTML", "CSS", "Javascript", "Project Management"],
+  "bioPic": "images/fox.jpg"
+};
+var work = {
+  "jobs": [
+  {
+      "employer": "Loyalty Services Ltd",
+      "title": "Project Manager",
+      "location" : "Auckland",
+      "dates": "2011-to date",
+      "description": " Agreeing, implementing and delivering project objectives with clients,\
+      our team of developers and contractors."
+    },
+
+    {
+      "employer": "The Winery",
+      "title": "Marketing & Event Manager",
+      "location": "Queenstown",
+      "dates": "2009-2011",
+      "description":" Working closely with senior management to execute the domestic marketing plan."
+    }
+
+  ]
 };
 
-var formattedRole = HTMLheaderRole.replace("%data%",role);
-$("#header").prepend(formattedRole);
+var projects = {
+  "projects": [
+    {
+"title": "Resume Builder",
+"dates": " January 2016",
+"description": "Using the Udacity JavaScript basics course I created my resume using JS,HTML & CSS.",
+//"images": "images/udacity.jpg"
+   },
 
-var formattedName = HTMLheaderName.replace("%data%",name);
-$("#header").prepend(formattedName);
+  {
+"title": "Build a Calculator",
+"dates": "January 2016",
+"description": "Using a Code Academy course I built a basic calculator using JS,HTML & CSS.",
+//"images" :"images/codeacademy.png"
+   }
 
-var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
-$("#topContacts").append(formattedMobile);
-
-var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
-$("#topContacts").append(formattedEmail);
-
-var formattedGithub = HTMLgithub.replace("%data%",bio.contact.github);
-$("#topContacts").append(formattedGithub);
-
-var formattedLocation = HTMLlocation.replace("%data%",bio.contact.location);
-$("#topContacts").append(formattedLocation);
-
-var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
-$("#header").append(formattedMsg);
-
-var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
-$("#header").append(formattedBiopic);
-
-
-
-if (bio.skills.length>0) {
-  $("#header").append(HTMLskillsStart);
- 
-  var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
-  $("#skills").append(formattedSkill);
-
-  var formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
-  $("#skills").append(formattedSkill);
-
-  var formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
-  $("#skills").append(formattedSkill);
-
-  var formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
-  $("#skills").append(formattedSkill);
-
+]
 };
 
 var education = {
@@ -81,68 +78,74 @@ var education = {
   {
     "title": "JavaScript Syntax",
     "school": "Udacity",
-    "dates": "2016",
-    "url": "http://www.udacity.com/course/ud804"
-  }
- ]
-}
-
-var work = {
-  "jobs" : [
-  {
-  "employer" : "Loyalty Services Ltd",
-  "title" : "Project Manager",
-  "location" : "Auckland",
-  "dates" : "2011-to date",
-  "description" : " Agreeing project objectives with clients, our team of developers \
-   and contractors.Risk assessment and ensuring all the aims of the project are met and \
-   ensuring the quality standards are maintained."
+    "dates": "Jan 2016",
+    "url": "https://www.udacity.com"
   },
 
-  {
-  "employer" : "The Winery",
-  "title" : "Marketing & Event Manager",
-  "location" : "Queenstown",
-  "dates" : "2009-2011",
-  "description" :" Working closely with senior management to execute the domestic marketing plan.
-   Promote the company across various industry and target B2B marketing platforms."
+    {
+    "title": "JavaScript Basics",
+    "school": "Code Academy",
+    "dates": "Nov 2016",
+    "url": "https://www.codeacademy.com"
   }
+
  ]
 };
 
-var projects = {
-  "projects" : [
-    {
-"title": "My Resume",
-"dates": "2016",
-"description": "Using the Udacity JavaScript basics course I created my resume using JS,HTML & CSS.",
-"images" :["images/udacity.jpg"
-   ]
-   }
-]
+
+var formattedRole = HTMLheaderRole.replace("%data%",role);
+var formattedName = HTMLheaderName.replace("%data%",name);
+$("#header").prepend(formattedRole, formattedName);
+
+var formattedBiopic = HTMLbioPic.replace("%data%",bio.bioPic);
+var formattedMsg = HTMLwelcomeMsg.replace("%data%",bio.welcomeMsg);
+$("#header").append(formattedBiopic, formattedMsg);
+
+
+var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
+var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
+var formattedGithub = HTMLgithub.replace("%data%",bio.contact.github);
+var formattedLocation = HTMLlocation.replace("%data%",bio.contact.location);
+$("#topContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation );
+
+if (bio.skills.length > 0) {
+  $("#header").append(HTMLskillsStart);
+ 
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[0]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[1]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[2]);
+  $("#skills").append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace("%data%",bio.skills[3]);
+  $("#skills").append(formattedSkill);
+
 };
-//Display work function
+
 function displayWork () {
 for (job in work.jobs) {
+  //Create new div for work experience
 $("#workExperience").append(HTMLworkStart);
-
+//Concatonate employer and title
 var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
 var formattedEmployerTitle = formattedEmployer + formattedTitle;
-$(".work-entry:last").append(formattedEmployerTitle);
-
 var formattedWorkLocation =HTMLworkLocation.replace("%data%",work.jobs[job].location);
+$(".work-entry:last").append(formattedEmployerTitle);
 $(".work-entry:last").append(formattedWorkLocation);
 
 var formattedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
 $(".work-entry:last").append(formattedDates);
-
-var formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description)
 $(".work-entry:last").append(formattedDescription);
 
 }
 }
 displayWork();
+
 
 //Display education function
 function displayEducation () {
@@ -162,19 +165,6 @@ $(".education-entry:last").append(formattedDegree);
 }
 }
 
-function locationizer(work_obj){
-var locationArray =[];
-for (job in work_obj.jobs){
-  var newLocation = work_obj.jobs[job].location;
-  locationArray.push(newLocation);
-
-}
-
-return locationArray;
-}
-
-console.log(locationizer(work));
-
 displayEducation();
 
 //Display online courses
@@ -193,32 +183,48 @@ $(".education-entry:last").append(formattedDates);
 $(".education-entry:last").append(formattedUrl);
 
 };
-
-//Display projects
-
 projects.display = function () {
 for (project in projects.projects) {
 $("#projects").append(HTMLprojectStart);
 
 var formattedTitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
-$(".project-entry:last").append(formattedTitle);
-
 var formattedDates = HTMLprojectDates.replace("%data%",projects.projects[project].dates);
-$(".project-entry:last").append(formattedDates);
-
 var formattedDescription = HTMLprojectDescription.replace("%data%",projects.projects[project].description);
-$(".project-entry:last").append(formattedDescription);
+var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images);
+$(".project-entry:last").append(formattedTitle,formattedDates,formattedDescription,formattedImage);
+}
 
-if (projects.projects[project].images.length >0) {
-    for (image in projects.projects[project].images) {
-    var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images[image]);
-    $(".project-entry:last").append(formattedImage);
-    }
-  }
- }
 };
 
 projects.display();
+
+
+
+
+//function locationizer(work_obj){
+//var locationArray =[];
+//for (job in work_obj.jobs){
+  //var newLocation = work_obj.jobs[job].location;
+  //locationArray.push(newLocation);
+//}
+
+//return locationArray;
+//}
+//console.log(locationizer(work));
+
+
+
+
+function inName(name) {
+name = name.trim().split(" ");
+console.log(name);
+name[1] = name[1].toUpperCase();
+name[0] = name[0].slice(0,1).toUpperCase()+name[0].slice(1).toLowerCase();
+return name[0]+ " "+name[1];
+}
+
+$("#main").append(internationalizeButton);
+
 
 
 //Google Map
